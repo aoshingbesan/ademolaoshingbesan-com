@@ -25,29 +25,29 @@ const site = {
   ],
   experience: [
     {
-      role: "Founding Product Designer (Part-Time)",
-      company: "Zidify",
-      period: "Jul 2024 – Present",
-    },
-    {
       role: "AI Product & Automation Designer",
       company: "B2B Legal Tech Stealth Startup",
-      period: "May 2025 – Dec 2025",
+      period: "2025",
+    },
+    {
+      role: "Founding Product Designer (Part-Time)",
+      company: "Zidify",
+      period: "2024 – Present",
     },
     {
       role: "Product Designer",
       company: "Consumatech Solutions",
-      period: "Jan 2024 – May 2025",
+      period: "2024 – 2025",
     },
     {
       role: "Product Designer",
       company: "Freelance & Contract",
-      period: "Feb 2022 – Dec 2023",
+      period: " 2022 – 2023",
     },
     {
       role: "Visual & Brand Designer",
       company: "Prince Graphic Concepts",
-      period: "Dec 2019 – Jan 2022",
+      period: " 2019 – 2022",
     },
   ],
   services: [
@@ -146,10 +146,12 @@ const card =
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center px-4 py-6 sm:px-6 lg:h-full lg:min-h-0 lg:px-8 lg:py-8">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-3 md:grid-cols-2 lg:h-full lg:grid-cols-4 lg:grid-rows-[1.25fr_1fr_1fr] lg:[grid-auto-flow:dense]">
+    <div className="w-full max-w-full overflow-x-hidden px-4 py-6 sm:px-6 lg:flex lg:h-full lg:flex-1 lg:items-center lg:justify-center lg:px-8 lg:py-8">
+      <div className="mx-auto grid w-full min-w-0 max-w-6xl grid-cols-1 gap-3 md:grid-cols-2 lg:h-full lg:grid-cols-4 lg:grid-rows-[1.25fr_1fr_1fr] lg:[grid-auto-flow:dense]">
         {/* About */}
-        <section className={`${card} bg-white dark:bg-zinc-900 md:col-span-2`}>
+        <section
+          className={`${card} order-3 bg-white dark:bg-zinc-900 md:order-none md:col-span-2`}
+        >
           <Pill>About</Pill>
           <p className="mt-4 text-sm leading-6 text-zinc-900 dark:text-zinc-100 sm:text-base sm:leading-7">
             {site.about}
@@ -158,7 +160,7 @@ export default function Home() {
 
         {/* Photo */}
         <section
-          className={`${card} items-center justify-center gap-3 bg-white text-center dark:bg-zinc-900`}
+          className={`${card} order-2 items-center justify-center gap-3 bg-white text-center dark:bg-zinc-900 md:order-none`}
         >
           <div className="relative h-44 w-44 shrink-0">
             <svg
@@ -197,7 +199,9 @@ export default function Home() {
         </section>
 
         {/* Under construction */}
-        <section className={`${card} flex flex-col bg-[#f7f7f4] dark:bg-zinc-900`}>
+        <section
+          className={`${card} order-1 flex flex-col bg-[#f7f7f4] dark:bg-zinc-900 md:order-none`}
+        >
           <span className="inline-flex items-center gap-2 self-start rounded-full bg-black px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white dark:bg-white dark:text-black">
             <span className="relative flex h-2 w-2">
               <span
@@ -228,7 +232,7 @@ export default function Home() {
           href={site.linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${card} group flex min-h-[190px] flex-col justify-between bg-[#f0f4f8] transition-transform hover:-translate-y-0.5 dark:bg-zinc-900`}
+          className={`${card} group order-6 flex min-h-[190px] flex-col justify-between bg-[#f0f4f8] transition-transform hover:-translate-y-0.5 dark:bg-zinc-900 md:order-none`}
         >
           <svg
             viewBox="0 0 24 24"
@@ -250,7 +254,7 @@ export default function Home() {
 
         {/* Experience */}
         <section
-          className={`${card} flex flex-col bg-white dark:bg-zinc-900 md:col-span-2 lg:row-span-2`}
+          className={`${card} order-5 flex flex-col bg-white dark:bg-zinc-900 md:order-none md:col-span-2 lg:row-span-2`}
         >
           <Pill>Experience</Pill>
           <ul className="mt-4 divide-y divide-black/[0.06] dark:divide-white/10">
@@ -280,10 +284,10 @@ export default function Home() {
 
         {/* Links */}
         <section
-          className={`${card} flex flex-col bg-[#f6f5f3] dark:bg-zinc-900 lg:row-span-2`}
+          className={`${card} order-7 flex flex-col bg-[#f6f5f3] dark:bg-zinc-900 md:order-none lg:row-span-2`}
         >
           <Pill>Elsewhere</Pill>
-          <ul className="mt-4 flex flex-1 flex-col justify-between divide-y divide-black/[0.06] dark:divide-white/10">
+          <ul className="mt-5 flex flex-1 flex-col justify-between divide-y divide-black/[0.06] dark:divide-white/10">
             {site.links.map((link, i) => (
               <li key={i} className="flex-1">
                 <a
@@ -291,7 +295,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="group flex h-full items-center justify-between gap-4 py-4 first:pt-0 last:pb-0"
+                  className="group flex h-full items-center justify-between gap-4 py-6 lg:py-4 lg:first:pt-0 lg:last:pb-0"
                 >
                   <span className="flex items-center gap-3">
                     <svg
@@ -316,7 +320,9 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section className={`${card} bg-white dark:bg-zinc-900`}>
+        <section
+          className={`${card} order-4 bg-white dark:bg-zinc-900 md:order-none`}
+        >
           <Pill>Services</Pill>
           <ServicesCarousel services={site.services} />
         </section>
