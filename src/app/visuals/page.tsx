@@ -1,5 +1,5 @@
-import { SiteNav } from "../nav";
-import { SiteFooter } from "../footer";
+import { SiteNav } from "@/components/nav";
+import { SiteFooter } from "@/components/footer";
 
 // Mild aspect-ratio variation so the gallery doesn't look like a rigid grid —
 // swap for real image dimensions once shots are uploaded.

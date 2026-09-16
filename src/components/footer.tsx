@@ -1,5 +1,5 @@
-import { CopyEmailButton } from "./copy-email-button";
-import { site } from "./site-data";
+import { CopyEmailButton } from "@/components/copy-email-button";
+import { site } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (

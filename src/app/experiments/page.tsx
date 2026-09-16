@@ -1,5 +1,5 @@
-import { SiteNav } from "../nav";
-import { SiteFooter } from "../footer";
+import { SiteNav } from "@/components/nav";
+import { SiteFooter } from "@/components/footer";
 
 /* ------------------------------------------------------------------ */
 /*  EDIT ME — replace with real experiments                            */

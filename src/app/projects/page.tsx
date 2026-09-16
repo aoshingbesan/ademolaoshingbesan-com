@@ -1,6 +1,6 @@
-import { SiteNav } from "../nav";
-import { SiteFooter } from "../footer";
-import { ProjectsGrid, type Project } from "../projects-grid";
+import { SiteNav } from "@/components/nav";
+import { SiteFooter } from "@/components/footer";
+import { ProjectsGrid, type Project } from "@/components/projects-grid";
 
 /* ------------------------------------------------------------------ */
 /*  EDIT ME — replace with real case studies once migrated from Framer */

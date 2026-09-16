@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "/home-preview" },
-  { label: "About", href: "/home-preview/about" },
-  { label: "Projects", href: "/home-preview/projects" },
-  { label: "Experiments", href: "/home-preview/experiments" },
-  { label: "Visuals", href: "/home-preview/visuals" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experiments", href: "/experiments" },
+  { label: "Visuals", href: "/visuals" },
 ];
 
 export function SiteNav() {
@@ -16,7 +16,7 @@ export function SiteNav() {
 
   return (
     <nav className="flex items-center justify-between px-6 py-6 text-zinc-700 sm:px-10">
-      <Link href="/home-preview" className="text-sm font-semibold text-zinc-900">
+      <Link href="/" className="text-sm font-semibold text-zinc-900">
         AO
       </Link>
       <div className="hidden items-center gap-8 text-sm sm:flex">

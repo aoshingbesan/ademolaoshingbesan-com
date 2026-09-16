@@ -1,4 +1,4 @@
-// Shared identity/contact data used across every page of the new site.
+// Shared identity/contact data used across every page of the site.
 // Page-specific copy (Home's hero bio, About's long-form bio, etc.) lives in
 // each page's own file — this is only what's reused everywhere (nav, footer).
 

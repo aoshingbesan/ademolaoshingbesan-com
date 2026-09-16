@@ -1,6 +1,6 @@
-import { SiteNav } from "../nav";
-import { SiteFooter } from "../footer";
-import { experience } from "../site-data";
+import { SiteNav } from "@/components/nav";
+import { SiteFooter } from "@/components/footer";
+import { experience } from "@/lib/site-data";
 
 /* ------------------------------------------------------------------ */
 /*  EDIT ME                                                             */
