@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { RouteShell } from "./route-shell";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,13 +33,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-[100dvh] flex-col overflow-x-hidden lg:h-[100dvh] lg:overflow-hidden">
+      <body className="flex min-h-[100dvh] flex-col overflow-x-hidden">
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var d=localStorage.getItem('theme')==='dark';document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light';}catch(e){}})();`,
           }}
         />
-        {children}
+        <RouteShell>{children}</RouteShell>
       </body>
     </html>
   );
